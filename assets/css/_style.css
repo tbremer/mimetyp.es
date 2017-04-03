@@ -49,15 +49,9 @@ input { font-family: inherit; background-color: transparent; color: inherit; }
 }
 
 #footer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -69,12 +63,8 @@ input { font-family: inherit; background-color: transparent; color: inherit; }
 }
 
 .github {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .github__logo {
