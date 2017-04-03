@@ -52,7 +52,7 @@
    */
   emitter.on('search-change', function(evt) {
     var target = evt.target;
-    var value = target.value.toLowerCase();
+    var value = target.value.toLowerCase().replace(/^\.?/, '');
     var holder = document.getElementById('data');
 
     if (holder.firstChild) {
