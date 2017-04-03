@@ -38,7 +38,7 @@ input { font-family: inherit; background-color: transparent; color: inherit; }
   border-bottom-color: #b8b8b8;
 }
 
-#search:focus { outline: #7cafc2; }
+#search:focus {}
 
 #data {
   padding-top: 0;

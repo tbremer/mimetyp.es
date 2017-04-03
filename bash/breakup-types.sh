@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-FILE='./types-with-extensions.txt';
 OBJ_BY_TYPE='';
 OBJ_BY_EXT='';
 TAB=$'\t'
