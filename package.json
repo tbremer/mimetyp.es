@@ -2,5 +2,8 @@
   "name": "mimetyp.es",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "push": "rsync -rav -e ssh --exclude='.git' --exclude='dev-server.js' --exclude='_style.css' --exclude='README.md' --ignore-times $(pwd)"
+  }
 }
