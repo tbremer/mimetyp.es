@@ -48,6 +48,10 @@ input { font-family: inherit; background-color: transparent; color: inherit; }
   word-break: break-all;
 }
 
+.not-found {
+  color: #585858;
+}
+
 #footer {
   display: flex;
   justify-content: space-between;

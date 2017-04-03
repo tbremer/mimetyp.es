@@ -52,8 +52,10 @@
    */
   emitter.on('search-change', function(evt) {
     var target = evt.target;
-    var value = target.value.toLowerCase().replace(/^\.?/, '');
+    var originalValue = target.value.toLowerCase();
+    var searchValue = originalValue.replace(/^\.?/, '');
     var holder = document.getElementById('data');
+    var node = document.createElement('div');
 
     if (holder.firstChild) {
       while (holder.firstChild) {
@@ -61,12 +63,23 @@
       }
     }
 
-    if (!(value in types)) return;
+    if (searchValue.length === 0) return;
 
-    var type = types[value];
-    var node = document.createElement('div');
+    if (!(searchValue in types)) {
+      var em = document.createElement('em');
+      var message = document.createTextNode(' not found');
 
-    node.textContent = type;
+      em.textContent = originalValue;
+
+      node.setAttribute('class', 'not-found');
+      node.appendChild(em);
+      node.appendChild(message);
+    }
+    else {
+      var type = types[searchValue];
+
+      node.textContent = type;
+    }
 
     holder.appendChild(node);
   });
