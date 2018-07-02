@@ -1,0 +1,11 @@
+---
+version: '3'
+
+services:
+  server:
+    expose:
+      - 7000
+    image: "registry.gitlab.com/tbremer/docker-registry/mimetyp.es_server:latest"
+    build:
+      context: "./"
+      dockerfile: "./Dockerfile"
